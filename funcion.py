@@ -55,3 +55,37 @@ def printinfo(arg1, *vartuple):
 
 printinfo(10)
 printinfo(10, 60, 79)
+
+# Anonymous Functions - keyword: lambda
+# Basic Syntax = lambda [arg1 [,arg2,.....argn]]:expression
+jumlahkan = lambda arg1, arg2: arg1 + arg2;
+
+print("Value of total : ", jumlahkan(10, 20))
+print("Value of total : ", jumlahkan(20, 20))
+
+
+# Return Value
+
+def return_test(arg1, arg2):
+    # Add both the parameters and return them."
+    total = arg1 + arg2
+    print("Inside the function : ", total)
+    return total
+
+
+total = return_test(10, 20);
+print("Outside the function : ", total)
+
+# Scope
+total = 0
+def return_test(arg1, arg2):
+    # global total  # change to global scope
+
+    # Add both the parameters and return them."
+    total = arg1 + arg2
+    print("Inside the function : ", total)
+    return total
+
+
+return_test(10, 20);
+print("Outside the function : ", total)
